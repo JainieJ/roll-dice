@@ -1,16 +1,16 @@
 import React from "react";
 import "./Die.css";
-import {
-  FaDiceOne,
-  FaDiceTwo,
-  FaDiceThree,
-  FaDiceFour,
-  FaDiceFive,
-  FaDiceSix
-} from "react-icons/fa";
+import * as converter from "number-to-words";
 
-const Die = () => {
-  return <FaDiceFour className="Die" />;
+const Die = ({ num, isRolling }) => {
+  const value = converter.toWords(num);
+  const rolling = isRolling ? "animated wobble" : "";
+  const dice = `fas fa-dice-${value} fa-10x ${rolling}`;
+  return (
+    <div className="Die">
+      <i className={dice} />
+    </div>
+  );
 };
 
 export default Die;
