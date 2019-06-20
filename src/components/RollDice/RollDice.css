@@ -1,0 +1,21 @@
+.RollDice {
+  width: 25rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.RollDice-btn {
+  background: #000;
+  color: #fff;
+  width: 15rem;
+  height: 4rem;
+  margin: 5rem auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: 0.8rem;
+}
