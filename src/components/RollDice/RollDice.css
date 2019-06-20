@@ -19,4 +19,13 @@
   font-size: 1.3rem;
   border-radius: 0.8rem;
   cursor: pointer;
+  border: none;
+}
+
+.RollDice-btn:focus {
+  outline: none;
+}
+
+.RollDice-rolling {
+  background: #6a5acd;
 }

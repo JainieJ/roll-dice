@@ -20,13 +20,33 @@ class RollDice extends Component {
   };
   render() {
     const { value1, value2, isRolling } = this.state;
+    let btn;
+    if (isRolling) {
+      btn = (
+        <button
+          className="RollDice-btn RollDice-rolling"
+          onClick={this.handleClick}
+          disabled={true}
+        >
+          Rolling...
+        </button>
+      );
+    } else {
+      btn = (
+        <button
+          className="RollDice-btn"
+          onClick={this.handleClick}
+          disabled={false}
+        >
+          Roll Dice!
+        </button>
+      );
+    }
     return (
       <div className="RollDice">
         <Die num={value1} isRolling={isRolling} />
         <Die num={value2} isRolling={isRolling} />
-        <div className="RollDice-btn" onClick={this.handleClick}>
-          Roll Dice!
-        </div>
+        {btn}
       </div>
     );
   }
